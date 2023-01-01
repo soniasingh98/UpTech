@@ -10,7 +10,7 @@ function App() {
    getRecipes();
  },[query]);
  const getRecipes=async()=>{
-  const response=await fetch( `http://hn.algolia.com/api/v1/search?query=${query}`)
+  const response=await fetch( `https://hn.algolia.com/api/v1/search?query=${query}`)
   const data=await response.json();
   console.log(data.hits)
   setlatest(data.hits);
